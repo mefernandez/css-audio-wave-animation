@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'LatoBold';
+    src: url(/fonts/Lato-Bold.ttf);
+}
+
+h1 {
+    font-family: 'LatoBold';
+    color: white;
+}
+
+h1 em {
+    font-family: 'LatoBold';
+    font-style: normal;
+    color: #ff8e3a;
+}
+
+.container {
+    margin: 7em;
+}
+
+body {
+    background-color: #100b30;
+}
+
+@keyframes audio-wave {
+    0% {
+        height: 10px;
+        transform: translateY(0px);
+        background: #ff8e3a;
+    }
+    25% {
+        height: 40px;
+        transform: translateY(-5px) scaleY(1.7);
+        background: #ed509e;
+    }
+    50% {
+        height: 10px;
+        transform: translateY(0px);
+        background: #9c73f8;
+    }
+    100% {
+        height: 10px;
+        transform: translateY(0px);
+        background: #0fccce;
+    }
+}
+
+.sound-wave {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    height: 60px;
+    padding: 5em;
+    background-color: #3e396b;
+    border-radius: 10px;
+}
+
+.sound-wave span {
+    height: 40px;
+    display: block;
+    width: 10px;
+    border-radius: 8px;
+    background: orange;
+    animation: audio-wave 2.2s infinite ease-in-out;
+    animation-play-state:paused;
+}
+
+.play {
+    animation-play-state:running !important;
+}
+
+.pause {
+    animation-play-state:paused !important;
+}
+
+
+.sound-wave span:nth-child(2) {
+    left: 11px;
+    animation-delay: 0.2s;
+}
+
+.sound-wave span:nth-child(3) {
+    left: 22px;
+    animation-delay: 0.4s;
+}
+
+.sound-wave span:nth-child(4) {
+    left: 33px;
+    animation-delay: 0.6s;
+}
+
+.sound-wave span:nth-child(5) {
+    left: 44px;
+    animation-delay: 0.8s;
+}
